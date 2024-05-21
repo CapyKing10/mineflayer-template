@@ -47,7 +47,8 @@ bot.on('spawn', () => {
 
 bot.on('message', (message) => {
     console.log(message.toAnsi());
-    if (message.toString() === "[8b8t] Please, login with the command: /login <password>") {
-        bot.chat(`/login ${config.password}`);
-    }
+});
+
+bot.on('spawn', () => {
+    bot.chat(`/login ${config.password}`);
 });
