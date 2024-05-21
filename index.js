@@ -43,12 +43,9 @@ function loadCommands() {
 
 bot.on('spawn', () => {
   loadCommands();
+  bot.chat(`/login ${config.password}`);
 });
 
 bot.on('message', (message) => {
     console.log(message.toAnsi());
-});
-
-bot.on('spawn', () => {
-    bot.chat(`/login ${config.password}`);
 });
